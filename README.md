@@ -57,5 +57,5 @@ All other code (HTML/CSS/JS) is embedded in `html_page.h`.
 
 1. **Clone this repository**  
    ```bash
-   git clone https://github.com/<your-username>/rc_UNIMAP.git
+   git clone https://github.com/zainalabidin85/html-RC.git
    cd html-RC
