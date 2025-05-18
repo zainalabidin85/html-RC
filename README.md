@@ -59,3 +59,40 @@ All other code (HTML/CSS/JS) is embedded in `html_page.h`.
    ```bash
    git clone https://github.com/zainalabidin85/html-RC.git
    cd html-RC
+   
+2. **Open the sketch**
+  - Launch ESP32_RCWIFI.ino in Arduino IDE or VS Code with PlatformIO.
+
+3. **(Optional) Customize**
+  - Network: Edit ssid & password in ESP32_RCWIFI.ino.
+  - Pins: Change pwm1, dir1, pwm2, dir2 as needed.
+  - Default speed: Modify int pwmSpeed = 128;.
+  - UI styling: Tweak the HTML/CSS/JS in html_page.h.
+
+4. **Select board & port**
+  - Board: e.g. “ESP32 Dev Module”
+  - Port: your ESP32’s serial port
+
+5. **Upload**
+  - Click Upload. Open Serial Monitor at 115200 baud.
+
+6. **Connect & Control**
+   - Connect your computer or phone to WiFi rc_UNIMAP (password: 12345678).
+   - Open a browser to http://192.168.4.1 (shown in Serial Monitor).
+   - Use the on-screen buttons and slider to drive your motors!
+
+## File Structure
+
+├── ESP32_RCWIFI.ino     # Main Arduino sketch
+
+└── html_page.h         # Embedded HTML/CSS/JS for the web UI
+
+
+## Troubleshooting
+
+  - Cannot see SSID?
+    - Make sure WiFi.softAP(ssid, password); in setup() ran without errors.
+  - Pins not responding?
+    - Double-check your motor driver wiring and ESP32 pin assignments.
+  - Slow or no motor response
+    - Ensure your power supply can deliver sufficient current to both motors.
